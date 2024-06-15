@@ -6,11 +6,19 @@
     <title>Portfolio Web Nishi Kumari</title>
     <!-- Custom CSS Link -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   </head>
   <body>
     <header class="header-sec">
       <nav>
         <label class="logo">NISHI<span>KUMARI</span></label>
+        <div class="menu-toggle-container">
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="menu-btn">
+            <span></span>
+          </label>
+        </div>
         <ul class="nav-menu">
           <li><a class="active" href="#">Home</a></li>
           <li><a href="#about-section">About</a></li>
@@ -18,14 +26,9 @@
           <li><a href="#skill">Skills</a></li>
           <li><a href="#footer">Contact</a></li>
         </ul>
-        <div class="menu-toggle-container">
-          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-          <label for="menu-toggle" class="menu-btn">
-            <span></span>
-          </label>
-        </div>
       </nav>
     </header>
+    
     <!-- hero -->
     <section id="hero">
       <div class="container">
@@ -56,14 +59,14 @@
       <div class="about-content">
         <div class="about-img-container">
           <img src="./Image/profile.png" class="about-img" alt="" />
-          <a href="https://drive.google.com/file/d/1KXCgeBTT4WMF41mKrdYqGqC36gMEKUjM/view?usp=sharing" download>
+          <a href="https://drive.google.com/file/d/1c66TSeBe5ZTddsuxInLCB6oeG_7cuvoC/view?usp=sharing" download>
             <button class="download-cv-btn">Download CV</button>
           </a>  
         </div>
         <p class="about-info">
           Hi Everyone My name is Nishi kumari. Currently I am a B-Tech Student 
           in Guru Gobind Singh Educational Society's Technical Campus in 3rd year.
-           I am from Bokaro Jharkhand,currently, I am pursuing a Bachelor of Technology
+           I am from Dhanbad Jharkhand,currently, I am pursuing a Bachelor of Technology
             in Electronic and communication engineering  from From    Guru Gobind Singh Educational 
             Society's Technical Campus  I have done my diploma from  Gp bhaga from jharkhand with a 
             percentage 84. I have done my matriculation from Coal fields academy with a percentage 84 2%.
@@ -86,10 +89,10 @@
 
         </div>
         <div class="project-card">
-          <img src="./Image/project/rec.png" alt="Project 2" />
-          <h3>Recipe Web</h3>
-          <p>Explore recipes online: ingredients, instructions....</p>
-          <a href="https://recipe-web-7qj1.vercel.app/"><button>Read More</button></a>
+          <img src="Image/project/Landing Page - Google Chrome 15-06-2024 18_07_04.png" alt="Project 2" />
+          <h3>Landing Page</h3>
+          <p>Explore mobile online: accesories, instructions....</p>
+          <a href="https://landing-web-sage.vercel.app/"><button>Read More</button></a>
 
         </div>
         <div class="project-card">
@@ -97,6 +100,13 @@
           <h3>To-Do List</h3>
           <p>to-do lists for work and keep your tasks .......</p>
           <a href="https://to-do-list-eight-gamma-21.vercel.app/"><button>Read More</button></a>
+
+        </div>
+        <div class="project-card">
+          <img src="Image/project/ecom.png" alt="Project 4" />
+          <h3>Ecomerce website</h3>
+          <p>Explore to your fav brand and new collection</p>
+          <a href="https://ecom-web-xi.vercel.app/"><button>Read More</button></a>
 
         </div>
       </div>
@@ -196,31 +206,20 @@
    </div>
 
    <script>
-    function showConfirmation() {
-  const nameInput = document.querySelector('.form-mail');
-  const emailInput = document.querySelector('.form-email');
-  const messageInput = document.querySelector('.form-email-w');
-
-  if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
-    alert('Please fill in all required fields.');
-    return;
-  }
-
-  if (confirm("Are you sure?")) {
-    // Proceed with form submission or any other action
-    console.log("Form submitted");
-    // Reset form inputs
-    nameInput.value = '';
-    emailInput.value = '';
-    messageInput.value = '';
-  } else {
-    // Cancel form submission or any other action
-    console.log("Form submission canceled");
-  }
-}
+    document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+  
+    menuToggle.addEventListener('change', () => {
+      if (menuToggle.checked) {
+        navMenu.style.maxHeight = navMenu.scrollHeight + 'px';
+      } else {
+        navMenu.style.maxHeight = '0';
+      }
+    });
+  });
+  
    </script>
 
   </body>
 </html>
-
-
